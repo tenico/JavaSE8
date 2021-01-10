@@ -36,7 +36,6 @@ import java.awt.Component;
 import java.awt.Image;
 import java.awt.MediaTracker;
 import java.net.URL;
-import java.net.URLClassLoader;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -87,9 +86,7 @@ public class DemoImages extends Component {
             }
         }
 
-        URLClassLoader urlLoader =
-                (URLClassLoader) cmp.getClass().getClassLoader();
-        URL fileLoc = urlLoader.findResource("images/" + name);
+	URL fileLoc = ClassLoader.getSystemClassLoader().getResource("images/" + name);
         img = cmp.getToolkit().createImage(fileLoc);
 
         MediaTracker tracker = new MediaTracker(cmp);
