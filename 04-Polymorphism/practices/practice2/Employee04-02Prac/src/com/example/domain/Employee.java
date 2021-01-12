@@ -50,6 +50,11 @@ public class Employee {
         {
          salary=salary+bonus;   
         }
+
+		public void engineerMethod() {
+		}
+
+	
     }
 
 
