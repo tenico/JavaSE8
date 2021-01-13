@@ -6,16 +6,18 @@ public class Customer {
     private String lastName;
     private Account[] accounts;
     private int numberOfAccounts;
-
-    public Customer(String f, String l) {
+    private Branch branch;
+    public Customer(String f, String l,Branch b) {
         firstName = f;
         lastName = l;
+        branch = b;
         // initialize accounts array
         accounts = new Account[10];
         numberOfAccounts = 0;
     }
 
-    public String getFirstName() {
+
+	public String getFirstName() {
         return firstName;
     }
 
@@ -34,5 +36,13 @@ public class Customer {
 
     public Account getAccount(int accountIndex) {
         return accounts[accountIndex];
+    }
+
+    public Branch getBranch() {
+        return branch;
+    }
+
+    public void setBranch(Branch branch) {
+        this.branch = branch;
     }
 }
