@@ -8,7 +8,10 @@ public abstract class Animal {
         this.legs = legs;
     }
     
-    public void walk() {
+    public Animal(String string) {
+	}
+
+	public void walk() {
         System.out.println("This animal walks on " + legs + " legs.");
     }
     
