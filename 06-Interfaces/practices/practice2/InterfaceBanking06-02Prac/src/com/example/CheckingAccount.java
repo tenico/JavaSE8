@@ -1,7 +1,7 @@
 package com.example;
 
 
-public class CheckingAccount extends Account {
+public class CheckingAccount extends Account implements AccountOperations {
     
     private final double overDraftLimit;
     
@@ -27,6 +27,22 @@ public CheckingAccount(double balance) {
     @Override
     public String getDescription() {
         return "Checking Account";
+    }
+
+    @Override
+    public double getBalance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public void deposit(double amount) {
+        // TODO Auto-generated method stub
+
+    }
+    @Override
+    public String toString(){
+            return "something";
     }
     
 }

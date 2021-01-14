@@ -3,7 +3,7 @@
 package com.example;
 
 
-public class SavingsAccount extends Account{
+public class SavingsAccount extends Account implements AccountOperations{
      Double rateofinterest=0.06;
 
     public SavingsAccount(double balance) {
@@ -37,5 +37,15 @@ public class SavingsAccount extends Account{
     public String getDescription() {
         return "Savings Account";
     }
+
+    @Override
+    public double getBalance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+    @Override
+    public String toString(){
+    return "something";
+}
     
 }
