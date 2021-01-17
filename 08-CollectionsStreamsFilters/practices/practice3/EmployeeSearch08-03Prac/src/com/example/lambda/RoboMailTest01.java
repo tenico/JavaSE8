@@ -1,7 +1,6 @@
 package com.example.lambda;
 
 import java.util.List;
-import java.util.function.Predicate;
 
 /**
  * @author Oracle
@@ -18,6 +17,9 @@ public class RoboMailTest01 {
     System.out.println("\n=== All Sales 50+");
     
     // Print sales employees 50+
-
+    pl.stream().parallel()
+    .filter(p->p.getDept().equals("Sales"))
+    .filter(a->a.getAge() > 50)
+    .forEach(robo::roboMail);
   }
 }
