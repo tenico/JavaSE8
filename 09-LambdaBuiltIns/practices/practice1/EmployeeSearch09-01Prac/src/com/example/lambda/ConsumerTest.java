@@ -14,10 +14,11 @@ public class ConsumerTest {
     List<Employee> eList = Employee.createShortList();
     Employee first = eList.get(0);
     
-    Consumer<Employee> eCons; // Write your consumer lambda here
+    Consumer<Employee> eCons = t -> System.out.println("Name: "+ t.getSurName() + " Role: "+t.getRole() + " Salary: "+t.getSalary()); 
     
-    System.out.println("=== First Salary");
+    System.out.println("=== First Salary"); 
+    
     // Call your consumer here
-    
+    eCons.accept(first);
   }
 }
