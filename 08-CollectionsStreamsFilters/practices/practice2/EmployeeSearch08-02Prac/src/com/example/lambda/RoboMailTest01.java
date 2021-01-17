@@ -18,7 +18,7 @@ public class RoboMailTest01 {
     System.out.println("\n=== Sales Execs");
     
     // roboMail Sales Executives
-    pl.stream()
+    pl.stream().parallel()
     .filter(e -> e.getDept().equals("Sales"))
     .filter(e -> e.getRole().equals((Role.EXECUTIVE)))
     .forEach(robo::roboMail);
