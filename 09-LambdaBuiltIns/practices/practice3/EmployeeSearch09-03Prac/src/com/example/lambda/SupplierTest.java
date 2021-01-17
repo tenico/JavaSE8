@@ -14,14 +14,54 @@ public class SupplierTest {
     
     List<Employee> eList = Employee.createShortList();
     Employee first = eList.get(0);
-    
-    Supplier<Employee> eSupp; // Write your Supplier lambda here
-      
+    /* His Sister
+      new Employee.Builder()
+            .givenName("Jane")
+            .surName("Doe")
+            .age(25)
+            .gender(Gender.FEMALE)
+            .role(Role.STAFF)
+            .dept("Sales")
+            .startDate(LocalDate.of(2011, 7, 14))
+            .salary(45000)
+            .email("jane.doe@example.com")
+            .phoneNumber("202-123-4678")
+            .address("33 3rd St")
+            .city("Smallville")
+            .state("KS")
+            .code("12333")
+            .build() 
+      );
+      */
+    Supplier<Employee> eSupp = 
+      () -> new Employee.Builder()
+              .givenName("Jill")
+              .surName("Doe")
+              .gender((Gender.FEMALE))
+              .role(Role.STAFF)
+              .dept("Sales")
+              .startDate(LocalDate.of(2012,7,14))
+              .salary(45000)
+              .email("jill.doe@example.com")
+              .phoneNumber("202-123-4678")
+              .address("33 3rd St")
+              .city("Smallville")
+              .state("KS")
+              .code("12333")
+              .build();
+            
+            
+            ; // Write your Supplier lambda here
     System.out.println("=== Print employee list before");
     eList.stream().forEach(Employee::printSummary);
     
     // Add new employee here
-    
+    eList.add(eSupp.get());
+
+    //supplier
+
+
+
     System.out.println("\n=== Print employee list after");
     eList.stream().forEach(Employee::printSummary);
     
