@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "cwd": "${workspaceFolder}/.."
+            
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "com.example.lambda.Main",
+            "projectName": "practices_fb7dcf9f"
+        },
+        {
+            "type": "java",
+            "name": "Launch P01BufferedReader",
+            "request": "launch",
+            "mainClass": "com.example.lambda.P01BufferedReader",
+            "projectName": "practices_fb7dcf9f"
+        },
+        {
+            "type": "java",
+            "name": "Launch P02NioRead",
+            "request": "launch",
+            "mainClass": "com.example.lambda.P02NioRead",
+            "projectName": "practices_fb7dcf9f"
+        },
+        {
+            "type": "java",
+            "name": "Launch P03NioReadAll",
+            "request": "launch",
+            "mainClass": "com.example.lambda.P03NioReadAll",
+            "projectName": "practices_fb7dcf9f"
+        },
+        {
+            "type": "java",
+            "name": "Launch P04NioReadAll",
+            "request": "launch",
+            "mainClass": "com.example.lambda.P04NioReadAll",
+            "projectName": "practices_fb7dcf9f"
+        }
+    ]
+}
