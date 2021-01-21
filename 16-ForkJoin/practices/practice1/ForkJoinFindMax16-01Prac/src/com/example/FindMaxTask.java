@@ -9,6 +9,7 @@ public class FindMaxTask extends RecursiveTask<Integer> {
     private int end;
 
     public FindMaxTask(int[] myArray, int start, int end, int threshold) {
+        System.out.println("Created a new task from start: "+start+" to "+end);
         this.threshold = threshold;
         this.myArray = myArray;
         this.start = start;
@@ -20,6 +21,7 @@ public class FindMaxTask extends RecursiveTask<Integer> {
             int max = Integer.MIN_VALUE;
             for (int i = start; i <= end; i++) {
                 int n = myArray[i];
+                //System.out.println("n: "+n);
                 if (n > max) {
                     max = n;
                 }
